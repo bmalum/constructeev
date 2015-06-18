@@ -45,6 +45,8 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    codeclimate-test-reporter (0.4.7)
+      simplecov (>= 0.7.1, < 1.0.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -186,6 +188,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bson_ext
   byebug
+  codeclimate-test-reporter
   coffee-rails (~> 4.1.0)
   coveralls
   jbuilder (~> 2.0)

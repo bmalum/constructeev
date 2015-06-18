@@ -38,6 +38,7 @@ gem 'bson_ext'
 
 # Code Coverage
 gem 'coveralls', require: false
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 
 group :development, :test do
