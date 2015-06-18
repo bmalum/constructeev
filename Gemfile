@@ -33,8 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Use MongoID as ORM
-gem 'mongoid', '4'
-gem 'bson_ext'
+gem 'mongoid', '~> 4.0.2'
+gem 'bson_ext', '~> 1.5.1'
 
 # Code Coverage
 gem 'coveralls', require: false
