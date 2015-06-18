@@ -1,7 +1,4 @@
-require 'coveralls'
 require "codeclimate-test-reporter"
-
-Coveralls.wear!('rails')
 CodeClimate::TestReporter.start
 
 ENV['RAILS_ENV'] ||= 'test'
