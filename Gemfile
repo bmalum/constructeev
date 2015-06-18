@@ -34,7 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use MongoID as ORM
 gem 'mongoid', '~> 4.0.2'
-gem 'bson_ext', '~> 1.5.1'
+gem 'bson_ext', '>= 1.12.3'
 
 # Code Coverage
 gem 'coveralls', require: false
