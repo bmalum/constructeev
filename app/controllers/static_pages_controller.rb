@@ -1,30 +1,32 @@
 # StaticPagesController is a controller for all non REST Pages
+# 
+# This is essential for presenting "Semistatic"-Pages like About or Home
 class StaticPagesController < ApplicationController
-  # Start/Root Page
-  # nothing
+
+  # Functions for the Controller of the "Static"-Pages
+  #
+  # You can define here functions and also Variable (see Example) you can
+  # access really easy on the view, so you do not have to hack in the html.
+  #
+  # @example
+  #   def example
+  #     @some_tag = "some_value"
+  #   end
+  #     
+  # @return [undefined]
+  # @api public
   def home
   end
 
   # Static Help Page
-  # nothing
+  # @return [undefined]
+  # @api public
   def help
   end
 
-# Macro for defining ActiveModel::Name object on the attributes class
-#
-# This is essential for rails helpers to work properly when generating
-# form input names etc.
-#
-# @example
-#   class UserAttributes
-#     include ROM::Model::Attributes
-#
-#     set_model_name 'User'
-#   end
-#
-# @return [undefined]
-#
-# @api public
+  # Start/Root Page
+  # @return [undefined]
+  # @api public
   def about
   end
 end
