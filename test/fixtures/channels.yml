@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  img_hash: MyString
-  sec_hash: MyString
-  slug: MyString
+  img_hash: 
+  sec_hash: 
+  slug: 
 
 two:
   name: MyString
-  img_hash: MyString
-  sec_hash: MyString
-  slug: MyString
+  img_hash: 2324356643
+  sec_hash: 
+  slug: 
