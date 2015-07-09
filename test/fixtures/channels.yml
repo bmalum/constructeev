@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  img_hash: MyString
+  sec_hash: MyString
+  slug: MyString
+
+two:
+  name: MyString
+  img_hash: MyString
+  sec_hash: MyString
+  slug: MyString
