@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @channel.name %>
+</p>
+
+<p>
+  <strong>Img hash:</strong>
+  <%= @channel.img_hash %>
+</p>
+
+<p>
+  <strong>Sec hash:</strong>
+  <%= @channel.sec_hash %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @channel.slug %>
+</p>
+
+<%= link_to 'Edit', edit_channel_path(@channel) %> |
+<%= link_to 'Back', channels_path %>
