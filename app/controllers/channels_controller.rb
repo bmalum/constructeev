@@ -31,8 +31,7 @@ class ChannelsController < ApplicationController
         format.html { redirect_to @channel, notice: "Channel was successfully created. Your Admin Hash is #{@channel[:sec_hash]}"}
         format.json { render :show, status: :created, location: @channel }
       else
-        format.html { render :new }
-        format.json { render json: @channel.errors, status: :unprocessable_entity }
+       render_block
       end
     end
   end
@@ -45,8 +44,7 @@ class ChannelsController < ApplicationController
         format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
         format.json { render :show, status: :ok, location: @channel }
       else
-        format.html { render :edit }
-        format.json { render json: @channel.errors, status: :unprocessable_entity }
+        render_block
       end
     end
   end
@@ -70,5 +68,10 @@ class ChannelsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
       params.require(:channel).permit(:name, :img_hash, :sec_hash, :slug)
+    end
+
+    def render_block
+       format.html { render :new }
+       format.json { render json: @channel.errors, status: :unprocessable_entity }
     end
 end
