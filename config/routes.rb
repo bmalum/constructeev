@@ -1,7 +1,23 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
+  get 'static_pages/imprint'
+
+  get 'static_pages/faq'
+
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
   resources :channels
   resources :channels
   resources :channels
+
+  root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
