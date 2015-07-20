@@ -1,0 +1,2 @@
+class ChannelMailer < ApplicationMailer
+end
