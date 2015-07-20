@@ -28,6 +28,7 @@ class ChannelsController < ApplicationController
 
     respond_to do |format|
       if @channel.save
+        ChannelMailer.welcome_email(@channel).deliver_now
         format.html { redirect_to @channel, notice: "Channel was successfully created. Your Admin Hash is #{@channel[:sec_hash]}"}
         format.json { render :show, status: :created, location: @channel }
       else
