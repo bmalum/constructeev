@@ -5,9 +5,12 @@ one:
   img_hash: 
   sec_hash: 
   slug: 
+  email: test@example.com
+
 
 two:
   name: MyString
   img_hash: 2324356643
   sec_hash: 
-  slug: 
+  slug:
+  email: test@example.com
