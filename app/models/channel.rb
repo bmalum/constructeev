@@ -4,12 +4,20 @@ class Channel < ActiveRecord::Base
 	before_save :create_admin_hash
   before_save :default_values
 
-  friendly_id :name, use: :slugged
+  friendly_id :slug_candidates, use: :slugged
 
   def should_generate_new_friendly_id?
     new_record?
   end
 
+    # Try building a slug based on the following fields in
+  # increasing order of specificity.
+  def slug_candidates
+    [
+      :name,
+      [:name, :created_at]
+    ]
+  end
 
   private 
 

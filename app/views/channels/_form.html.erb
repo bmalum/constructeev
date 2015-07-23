@@ -27,7 +27,13 @@
     <%= f.label :slug %><br>
     <%= f.text_field :slug %>
   </div-->
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create', :class => "btn btn-primary" %>
   </div>
 <% end %>

@@ -18,7 +18,7 @@ class ChannelsControllerTest < ActionController::TestCase
 
   test "should create channel" do
     assert_difference('Channel.count') do
-      post :create, channel: { img_hash: @channel.img_hash, name: @channel.name, sec_hash: @channel.sec_hash, slug: @channel.slug }
+      post :create, channel: { img_hash: @channel.img_hash, name: @channel.name, sec_hash: @channel.sec_hash, slug: @channel.slug, email: @channel.email }
     end
 
     assert_redirected_to channel_path(assigns(:channel))
