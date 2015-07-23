@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :channels
 
+  resources :feedbacks
+
 
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.

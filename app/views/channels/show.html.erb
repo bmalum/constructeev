@@ -27,8 +27,10 @@
 </p>
 <%= link_to 'Edit', edit_channel_path(@channel) %> |
 <%= link_to 'Back', channels_path %>
-</div>
 
+<section class="feedback_form">
+  <%= render 'feedbacks/feedback_form' %>
+</section>
 
 <div class="col-md-8">
     <% if @channel.feedbacks.any? %>
@@ -38,4 +40,7 @@
       </ol>
     <% end %>
   </div>
+</div>
+
+
 </div>

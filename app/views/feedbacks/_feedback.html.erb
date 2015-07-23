@@ -1,7 +1,16 @@
-<li id="feedback-<%= feedback.id %>">
-  <span class="user"><%= link_to feedback.channel.name, feedback.email %></span>
+<!--li id="feedback-<%= feedback.id %>">
+  <span class="user"><%= link_to feedback.name, channel_path %></span>
   <span class="content"><%= feedback.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(feedback.created_at) %> ago.
   </span>
-</li>
+</li-->
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Feedback by <b> <%= feedback.name %> </b>    <i><small>with ID #<%=feedback.id%> Posted <%= time_ago_in_words(feedback.created_at) %> ago.</small></i>
+</div>
+  <div class="panel-body">
+<%= feedback.content %>  
+</div>
+</div>

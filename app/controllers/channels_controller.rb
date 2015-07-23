@@ -10,7 +10,9 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
-        @feedbacks = @channel.feedbacks.limit(20)
+        @feedbacks = @channel.feedbacks.limit(20).reverse_order
+        @feedback = Feedback.new 
+
   end
 
   # GET /channels/new
