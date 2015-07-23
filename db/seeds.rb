@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+channels = Channel.order(:created_at).take(60)
+16000.times do
+  content = Faker::Lorem.sentence(5)
+  channels.each { |channel| channel.feedbacks.create!(content: content) }
+end
