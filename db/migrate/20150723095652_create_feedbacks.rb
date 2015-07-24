@@ -8,6 +8,6 @@ class CreateFeedbacks < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-        add_index :feedbacks, [:channel_id, :created_at]
+    add_index :feedbacks, [:channel_id, :created_at]
   end
 end

@@ -1,4 +1,8 @@
 class FeedbacksController < ApplicationController
+  
+
+  # POST /feedbacks
+  # POST /feedbacks.json
   def create
     @channel_id = feedback_params[:channel_id]
     @channel = Channel.find(@channel_id)
@@ -12,6 +16,7 @@ class FeedbacksController < ApplicationController
       render @channel
     end
   end
+
 
   private
 

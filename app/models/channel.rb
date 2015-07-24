@@ -11,7 +11,7 @@ class Channel < ActiveRecord::Base
     new_record?
   end
 
-    # Try building a slug based on the following fields in
+  # Try building a slug based on the following fields in
   # increasing order of specificity.
   def slug_candidates
     [
@@ -19,6 +19,7 @@ class Channel < ActiveRecord::Base
       [:name, :created_at]
     ]
   end
+
 
   private 
 
