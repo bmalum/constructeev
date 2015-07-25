@@ -1,5 +1,5 @@
+# FeedbacksController is a Embedded Controller - in Channels
 class FeedbacksController < ApplicationController
-  
 
   # POST /feedbacks
   # POST /feedbacks.json
