@@ -47,8 +47,10 @@ gem "lograge"
 # BootStrap an Rails
 gem 'bootstrap-sass'
 
-# Fake Data Generator 
+# Bootsrap Form Helper
+gem 'bootstrap_form'
 
+# Fake Data Generator 
 gem 'faker'
 
 group :development, :test do
