@@ -1,4 +1,4 @@
-<%= form_for(@channel) do |f| %>
+<%= bootstrap_form_for(@channel) do |f| %>
   <% if @channel.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@channel.errors.count, "error") %> prohibited this channel from being saved:</h2>
@@ -12,7 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <!--div class="field">
@@ -28,7 +27,6 @@
     <%= f.text_field :slug %>
   </div-->
   <div class="field">
-    <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
 
