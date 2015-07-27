@@ -20,6 +20,15 @@ class Channel < ActiveRecord::Base
     ]
   end
 
+  def self.authenticate(sec_hash)
+    channel = find_by_sec_hash(sec_hash)
+    if channel && channel.sec_hash == sec_hash
+      return channel
+    else
+      return nil
+    end
+  end
+
 
   private 
 
