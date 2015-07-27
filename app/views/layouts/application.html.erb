@@ -14,6 +14,7 @@
 <body>
 
 
+
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,7 +37,13 @@
                         <%= link_to 'List Channels', channels_path %>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                      <% if current_channel %>
+                       <%= link_to current_channel.name, channel_path(current_channel) %>
+                      </li><li>
+                        <%= link_to "Log out", logout_path %>
+                      <% else %>
+                        <%= link_to 'Login', new_session_path %>
+                      <%end%>
                     </li>
                 </ul>
             </div>
@@ -45,6 +52,14 @@
         <!-- /.container -->
     </nav>
 
+<div class="nav_padding">
+   <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+   <% if flash[:alert] %>
+    <div class="notice"><%= flash[:alert] %></div>
+  <% end %>
+</div>
 
 
 <%= yield %>
