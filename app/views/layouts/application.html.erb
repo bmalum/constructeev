@@ -52,14 +52,39 @@
         <!-- /.container -->
     </nav>
 
-<div class="nav_padding">
+
+  <div class="">.col-md-4</div>
+
    <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-   <% if flash[:alert] %>
-    <div class="notice"><%= flash[:alert] %></div>
-  <% end %>
+   <div class="nav_padding">
+<div class="ui icon message nav_padding">
+  <i class="inbox icon"></i>
+  <div class="content">
+    <div class="header">
+Notice:
+   </div>
+    <p><%= flash[:notice] %></p>
+  </div>
 </div>
+  </div>
+  <% end %>
+
+
+  <% if flash[:alert] %>
+     <div class="nav_padding">
+<div class="ui icon message nav_padding">
+  <i class="inbox icon"></i>
+  <div class="content">
+    <div class="header">
+Notice:
+   </div>
+    <p><%= flash[:alert] %></p>
+  </div>
+</div>
+</div>
+
+  <% end %>
+
 
 
 <%= yield %>
