@@ -47,6 +47,12 @@ gem "lograge"
 # BootStrap an Rails
 gem 'bootstrap-sass'
 
+# Bootsrap Form Helper
+gem 'bootstrap_form'
+
+# Fake Data Generator 
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

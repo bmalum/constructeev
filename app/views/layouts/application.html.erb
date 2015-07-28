@@ -14,6 +14,7 @@
 <body>
 
 
+
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,7 +34,16 @@
                         <%= link_to 'Create Channel', new_channel_path %>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <%= link_to 'List Channels', channels_path %>
+                    </li>
+                    <li>
+                      <% if current_channel %>
+                       <%= link_to current_channel.name, channel_path(current_channel) %>
+                      </li><li>
+                        <%= link_to "Log out", logout_path %>
+                      <% else %>
+                        <%= link_to 'Login', new_session_path %>
+                      <%end%>
                     </li>
                 </ul>
             </div>
@@ -41,6 +51,39 @@
         </div>
         <!-- /.container -->
     </nav>
+
+
+  <div class="">.col-md-4</div>
+
+   <% if flash[:notice] %>
+   <div class="nav_padding">
+<div class="ui icon message nav_padding">
+  <i class="inbox icon"></i>
+  <div class="content">
+    <div class="header">
+Notice:
+   </div>
+    <p><%= flash[:notice] %></p>
+  </div>
+</div>
+  </div>
+  <% end %>
+
+
+  <% if flash[:alert] %>
+     <div class="nav_padding">
+<div class="ui icon message nav_padding">
+  <i class="inbox icon"></i>
+  <div class="content">
+    <div class="header">
+Notice:
+   </div>
+    <p><%= flash[:alert] %></p>
+  </div>
+</div>
+</div>
+
+  <% end %>
 
 
 

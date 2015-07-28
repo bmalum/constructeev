@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -15,8 +17,17 @@ Rails.application.routes.draw do
 
   resources :channels
 
+  resources :feedbacks
+
+  resources :sessions
 
   root 'static_pages#home'
+
+  get    'login'   => 'sessions#new'
+  
+  post   'login'   => 'sessions#create'
+  
+  get 'logout'  => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

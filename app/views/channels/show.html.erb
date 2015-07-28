@@ -27,4 +27,20 @@
 </p>
 <%= link_to 'Edit', edit_channel_path(@channel) %> |
 <%= link_to 'Back', channels_path %>
+
+<section class="feedback_form">
+  <%= render 'feedbacks/feedback_form' %>
+</section>
+
+<div class="col-md-8">
+    <% if @channel.feedbacks.any? %>
+      <h3>Feedbacks (<%= @channel.feedbacks.count %>)</h3>
+      <ol class="feedbacks">
+        <%= render @feedbacks %>
+      </ol>
+    <% end %>
+  </div>
+</div>
+
+
 </div>

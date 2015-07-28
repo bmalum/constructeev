@@ -1,0 +1,15 @@
+<%= bootstrap_form_for (@feedback) do |f| %>
+ <div class="form-group">
+    <%= f.hidden_field :channel_id, value: @channel.id %>
+  </div>
+  <div class="field">
+    <%= f.text_field :email, placeholder: "Your e-Mail" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Your Name" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new feedback..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

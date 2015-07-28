@@ -3,14 +3,15 @@ class Channel < ActiveRecord::Base
 
 	before_save :create_admin_hash
   before_save :default_values
-
+  has_many :feedbacks
+  
   friendly_id :slug_candidates, use: :slugged
 
   def should_generate_new_friendly_id?
     new_record?
   end
 
-    # Try building a slug based on the following fields in
+  # Try building a slug based on the following fields in
   # increasing order of specificity.
   def slug_candidates
     [
@@ -18,6 +19,16 @@ class Channel < ActiveRecord::Base
       [:name, :created_at]
     ]
   end
+
+  def self.authenticate(sec_hash)
+    channel = find_by_sec_hash(sec_hash)
+    if channel && channel.sec_hash == sec_hash
+      return channel
+    else
+      return nil
+    end
+  end
+
 
   private 
 

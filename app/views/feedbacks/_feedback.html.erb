@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+  	Feedback by 
+  	<b>
+  		<%= feedback.name %>
+  	</b>
+  	<i>
+  		<small>
+  			with ID #<%=feedback.id%> Posted <%= time_ago_in_words(feedback.created_at) %> ago.
+  		</small>
+  	</i>
+	</div>
+  <div class="panel-body">
+		<%= feedback.content %>  
+	</div>
+</div>
