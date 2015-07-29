@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
  def destroy
   session[:channel_id] = nil
-  redirect_to login_path, :notice => "Logged out!"
+  redirect_to (login_path :only_path => true), :notice => "Logged out!"
  end
 
 end
