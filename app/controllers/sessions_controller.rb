@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    channel = Channel.authenticate(params[:sec_hash] :only_path => true)
+    channel = Channel.authenticate(params[:sec_hash])
   	if channel
     	session[:channel_id] = channel.id
     	redirect_to channel, :notice => "Logged in!"
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
  def destroy
   session[:channel_id] = nil
-  redirect_to (login_path :only_path => true), :notice => "Logged out!"
+  redirect_to login_path, :notice => "Logged out!"
  end
 
 end
