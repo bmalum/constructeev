@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    channel = Channel.authenticate(params[:sec_hash])
+    channel = Channel.authenticate(params[:sec_hash] :only_path => true)
   	if channel
     	session[:channel_id] = channel.id
     	redirect_to channel, :notice => "Logged in!"
