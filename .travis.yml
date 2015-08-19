@@ -2,7 +2,7 @@ before_script:
   - mysql -e 'create database constructeev_test;'
 language: ruby
 rvm:
-- 2.1.0
+- 2.2.2
 addons:
   code_climate:
     repo_token:
