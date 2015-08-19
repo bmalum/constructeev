@@ -13,6 +13,14 @@ is an Open Source Feedback Platform developed in Ruby on Rails. Developed by bMa
 
 ## Getting Started
 
+**Dependencies:**
+```
+/tmp/mysql.sock
+export SENDGRID_USER = YOURSENDGRIDUSERNAME
+export SENDGRID_PASSWD = YOURSENDGRIDPASSWORD
+```
+
+**Installing:**
 ```bash
 git clone https://github.com/bmalum/constructeev.git
 git checkout nightly
@@ -32,8 +40,8 @@ I don't know how to usw it now because it is NOT READY YET!
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/edenveil/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
+1. Fork it ( https://github.com/bmalum/constructeev/fork )
+2. Create your feature branch (`git checkout -b my-fucking-new-feature`)
+3. Commit your changes (`git commit -am 'Add my awesome feature'`)
+4. Push to the branch (`git push origin my-fucking-new-feature`)
 5. Create a new Pull Request
