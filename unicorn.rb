@@ -40,7 +40,7 @@ GC.respond_to?(:copy_on_write_friendly=) and
 # while queued.  This is only guaranteed to detect clients on the same
 # host unicorn runs on, and unlikely to detect disconnects even on a
 # fast LAN.
-check_client_connection false
+check_client_connection ture
 
 before_fork do |server, worker|
   # the following is highly recomended for Rails + "preload_app true"
