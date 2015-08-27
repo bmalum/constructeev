@@ -1,93 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script>
-  <title>Constructeev</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-
-
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="/">Constructeev</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <%= link_to 'Create Channel', new_channel_path %>
-                    </li>
-                    <li>
-                        <%= link_to 'List Channels', channels_path %>
-                    </li>
-                    <li>
-                      <% if current_channel %>
-                       <%= link_to current_channel.name, channel_path(current_channel) %>
-                      </li><li>
-                        <%= link_to "Log out", logout_path %>
-                      <% else %>
-                        <%= link_to 'Login', new_session_path %>
-                      <%end%>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+  <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Site Properities -->
+    <title>Homepage - Semantic</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="ui inverted segment">
+      <div class="ui inverted secondary pointing menu grid">
+        <div class="mobile only row">
+          <a class="active item">
+            <i class="sidebar icon"></i>
+          </a>
         </div>
-        <!-- /.container -->
-    </nav>
-
-
-  <div class="">.col-md-4</div>
-
-   <% if flash[:notice] %>
-   <div class="nav_padding">
-<div class="ui icon message nav_padding">
-  <i class="inbox icon"></i>
-  <div class="content">
-    <div class="header">
-Notice:
-   </div>
-    <p><%= flash[:notice] %></p>
-  </div>
-</div>
-  </div>
-  <% end %>
-
-
-  <% if flash[:alert] %>
-     <div class="nav_padding">
-<div class="ui icon message nav_padding">
-  <i class="inbox icon"></i>
-  <div class="content">
-    <div class="header">
-Notice:
-   </div>
-    <p><%= flash[:alert] %></p>
-  </div>
-</div>
-</div>
-
-  <% end %>
-
-
-
-<%= yield %>
-
-</body>
+        <div class="tablet only row">
+          <a class="item">
+            Tab
+          </a>
+        </div>
+        <div class="computer only row">
+          <a class="item">
+            Des
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
