@@ -5,30 +5,19 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
     <!-- Site Properities -->
-    <title>Homepage - Semantic</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <div class="ui inverted segment">
-      <div class="ui inverted secondary pointing menu grid">
-        <div class="mobile only row">
-          <a class="active item">
-            <i class="sidebar icon"></i>
-          </a>
-        </div>
-        <div class="tablet only row">
-          <a class="item">
-            Tab
-          </a>
-        </div>
-        <div class="computer only row">
-          <a class="item">
-            Des
-          </a>
-        </div>
+  <body ng-app="Constructeev" ng-controller="MainCtrl">
+    <%= render :partial => "layouts/sidenav_left" %>
+    <div class="pusher">
+      <div class="ui container">
+        <%= render :partial => "layouts/menu" %>
+        <%= render :partial => "layouts/content" %>
       </div>
     </div>
   </body>

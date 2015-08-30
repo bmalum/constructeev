@@ -1,0 +1,26 @@
+<div class="ui center aligned container">
+	<div class="ui orange piled segment">
+		<h4 class="ui header">{{Frontpage_Title}}</h4>
+		<p>
+			<div class="ui left aligned bulleted list">
+				<div class="item">It's FREE
+				</div>
+				<div class="item">OpenSource
+				</div>
+				<div class="item">Built for collecting Feedback
+				</div>
+				<br>
+				<div class="ui input">
+					<input type="text" placeholder="Name of your Channel">
+				</div>
+				<div class="ui input">
+					<input type="text" placeholder="email@yours.net">
+				</div>
+				<div class="ui animated button" tabindex="0">
+  <div class="visible content">Next</div>
+  <div class="hidden content">
+    <i class="right arrow icon"></i>
+  </div>
+</div>
+			</div>
+		</div>

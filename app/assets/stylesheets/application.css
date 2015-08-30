@@ -16,5 +16,14 @@
  */
 
 body{
-background-color: black;
+	background-color: white;
+}
+
+.ui.secondary.menu{
+	background-color: white !important;
+	z-index: 0
+}
+
+.pusher{
+	padding-bottom: 75px;
 }
