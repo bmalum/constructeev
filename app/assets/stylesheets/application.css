@@ -16,14 +16,34 @@
  */
 
 body{
-	background-color: white;
+	background-color: white !important;
 }
 
 .ui.secondary.menu{
 	background-color: white !important;
-	z-index: 0
+	z-index: 1;
+	padding-left: 10px;
+    padding-right: 10px;
 }
 
-.pusher{
-	padding-bottom: 75px;
+.nav_padding{
+	padding-top: 65px;
+}
+
+
+.masthead.segment {
+      min-height: 500px;
+      padding: 1em 0em;
+      z-index: 0;
+      background-image: url("/images/banner-bg.jpg") !important;
+      background-position: center bottom !important;
+    }
+
+.masthead h1 {
+        font-size: 40px;
+}
+
+div.ui.inverted.header{
+	padding-top: 5em;
+	font-size: 50%;
 }
