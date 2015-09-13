@@ -6,20 +6,19 @@
 		<div class="ui fluid form">
 			<div class="two fields">
 				<div class="field">
-					<input placeholder="myChannel" type="text">
+					<input placeholder="myChannel" type="text" ng-model="login.myChannel">
 				</div>
 				<div class="field">
 					<input placeholder="admin@xyz.com" type="text">
 				</div>
 			</div>
-			<div class="ui animated fade button" tabindex="0">
+			<div class="ui animated fade button" tabindex="0" ng-click="login()">
 				<div class="visible content">
 					Creat Channel
 				</div>
 				<div class="hidden content">
 					<i class="thumbs up icon"></i>
 				</div>
-
 				{{ your_custom_url}}
 			</div>
 		</div>

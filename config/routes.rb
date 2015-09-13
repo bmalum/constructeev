@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     scope module: :v1, constraints: ApiConstraints.new(version: 2, default: true) do
       resources :channels
       resources :sessions
+      post   'login'   => 'sessions#create'
     end
   end
 
