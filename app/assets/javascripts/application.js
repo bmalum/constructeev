@@ -1,16 +1,20 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require_directory .
+
+var app = angular.module('Constructeev', []);
+
+app.controller('MainCtrl', function($scope, $http) {
+  $scope.Frontpage_Title = 'Create YOUR own Channel now!';
+
+  $scope.toggle = function() {
+    angular.element(sidebar).sidebar('setting', 'transition', 'scale down').sidebar('toggle')
+  }
+  $scope.login = function(){
+  	$http.post('/api/sessions', {sec_hash:'f473d37344f4744cbea7ae735b416037'}).
+  then(function(response) {
+    console.log(response.data.valid)  	
+  }, function(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  }
+});

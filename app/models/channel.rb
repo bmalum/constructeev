@@ -1,11 +1,11 @@
 class Channel < ActiveRecord::Base
 	extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged
 
 	before_save :create_admin_hash
   before_save :default_values
   has_many :feedbacks
   
-  friendly_id :slug_candidates, use: :slugged
 
   def should_generate_new_friendly_id?
     new_record?

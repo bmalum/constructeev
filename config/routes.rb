@@ -1,4 +1,17 @@
+require 'api_constraints'
+
 Rails.application.routes.draw do
+
+  get 'static_pages/index'
+
+  namespace :api, defaults: {format: 'json'}  do 
+    scope module: :v1, constraints: ApiConstraints.new(version: 2, default: true) do
+      resources :channels
+      resources :sessions
+      post   'login'   => 'sessions#create'
+    end
+  end
+
   get 'sessions/new'
 
   get 'static_pages/home'

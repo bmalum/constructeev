@@ -53,6 +53,13 @@ gem 'bootstrap_form'
 # Fake Data Generator 
 gem 'faker'
 
+# Responder for API
+gem 'responders', '~> 2.0'
+
+# AMS Active Model Serializers
+gem "active_model_serializers", github: "rails-api/active_model_serializers"
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
