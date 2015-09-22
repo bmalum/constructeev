@@ -1,5 +1,6 @@
 class ChannelMailer < ApplicationMailer
 	default from: 'Constructeev <notifications@constructeev.com>'
+	layout 'welcome_email'
  	
  	# Welcome_email is a e-Mail sent to the Channel Admin, after setting up the channel
  	# and contains the Sec_Hash

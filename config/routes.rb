@@ -8,25 +8,11 @@ Rails.application.routes.draw do
     scope module: :v1, constraints: ApiConstraints.new(version: 2, default: true) do
       resources :channels
       resources :sessions
-      post   'login'   => 'sessions#create'
+      post 'login'   => 'sessions#create'
     end
   end
 
   get 'sessions/new'
-
-  get 'static_pages/home'
-
-  get 'static_pages/help'
-
-  get 'static_pages/about'
-
-  get 'static_pages/imprint'
-
-  get 'static_pages/faq'
-
-  get 'static_pages/home'
-
-  get 'static_pages/help'
 
   resources :channels
 
@@ -34,11 +20,11 @@ Rails.application.routes.draw do
 
   resources :sessions
 
-  root 'static_pages#home'
+  #root 'static_pages#index'
 
-  get    'login'   => 'sessions#new'
+  get 'login'   => 'sessions#new'
   
-  post   'login'   => 'sessions#create'
+  post 'login'   => 'sessions#create'
   
   get 'logout'  => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
