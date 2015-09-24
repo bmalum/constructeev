@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   resources :sessions
 
-  #root 'static_pages#index'
+  root 'static_pages#index'
 
   get 'login'   => 'sessions#new'
   

@@ -16,7 +16,7 @@ module Api
         respond_to do |format|
           if @channel.save
             ChannelMailer.welcome_email(@channel).deliver_now
-            format.json { render :show, status: :created, location: @channel }
+			format.json { render json: @channel }
           else
             render_block
           end

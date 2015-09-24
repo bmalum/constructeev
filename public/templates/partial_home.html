@@ -1,29 +1,6 @@
 <div ng-controller="HomeController">
 <div class="ui inverted vertical masthead center aligned segment">
-	<div class="ui text container">
-		<div class="ui inverted header">
-			<h1> Create your own Channel for free!</h1>
-		</div><br>
-		<div class="ui fluid form">
-			<div class="two fields">
-				<div class="field">
-					<input placeholder="myChannel" type="text" ng-model="signUp.myChannel">
-				</div>
-				<div class="field">
-					<input placeholder="admin@xyz.com" type="text" ng-model="signUp.myEmail">
-				</div>
-			</div>
-			<div class="ui animated fade button" tabindex="0" ng-click="sendSignUp(signUp)">
-				<div class="visible content">
-					Creat Channel
-				</div>
-				<div class="hidden content">
-					<i class="thumbs up icon"></i>
-				</div>
-				{{ your_custom_url}}
-			</div>
-		</div>
-	</div>
+	<div ui-view> </div>
 </div>
 <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
