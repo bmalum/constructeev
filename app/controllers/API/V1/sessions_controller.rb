@@ -7,7 +7,6 @@ module Api
 			respond_to :json
 
 			def index
-
 				respond_to do |format|
 					format.html
 					format.json { render json: session }
@@ -22,8 +21,9 @@ module Api
 						format.html
 						format.json { render json: session }
 					end
+					session[:valid] = true
 				else
-										session[:valid] = false
+					session[:valid] = false
 					respond_to do |format|
 						format.html
 						format.json { render json: session }

@@ -30,6 +30,10 @@ body{
 	padding-top: 65px;
 }
 
+.margined_item{
+  margin: 100px  !important;
+}
+
 
 .masthead.segment {
       min-height: 500px;
@@ -46,4 +50,39 @@ body{
 div.ui.inverted.header{
 	padding-top: 5em;
 	font-size: 50%;
+}
+
+
+
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+.margined_item{
+  margin: 50px  !important;
+}
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .margined_item{
+  margin: 75px  !important;
+}
+}
+
+/* Small Monitor */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.margined_item{
+  margin: 100px  !important;
+}
+}
+
+/* Large Monitor */
+
+@media only screen and (min-width: 1200px) {
+.margined_item{
+  margin: 150px  !important;
+}
 }
