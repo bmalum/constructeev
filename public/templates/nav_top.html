@@ -1,4 +1,5 @@
-<div class="ui fluid container nav_padding" ng-controller="NavController">
+<div ng-controller="NavController">
+<div class="ui fluid container nav_padding">
   <div class="ui orange secondary fixed pointing menu grid">
     <div class="mobile only row">
       <a class="item" ng-click="toggle()">
@@ -10,13 +11,38 @@
         Constructeev
       </a>
       <div class="right menu">
-        <a class="item">
+        <a class="item" href="/#/home/signupform">
           Create Channel
         </a>
-        <a class="item">
+        <a class="item" ng-click="toggleLoginModal()">
           Login
         </a>
       </div>
     </div>
   </div>
 </div>
+
+<div class="ui small modal" id="loginModal">
+  <i class="close icon"></i>
+  <div class="header centered">
+    Login to you Channel
+  </div>
+  <div class="image content">
+    <div class="image">
+      <i class="sign in icon"></i>
+    </div><div class="description centered">
+      <div class="ui form centered">
+  <div class="field">
+    <label>Enter here your Security Hash to login:</label>
+    <input type="text" ng-model="nav.sec_hash">
+  </div>
+</div></div>
+</div>
+      <div class="actions">
+          <div class="ui green button" ng-click="loginAdmin()">
+            <i class="checkmark icon"></i>
+            Login
+          </div>
+      </div>
+    </div>
+  </div> 
