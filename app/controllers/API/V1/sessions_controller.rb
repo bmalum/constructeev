@@ -16,12 +16,13 @@ module Api
 			def create
 				channel = Channel.authenticate(params[:sec_hash])
 				if channel
-					session = {:valid => true, :channel => channel.name}
+					session[:channel_id] = channel.id
+					test = session.to_json
+					#session = {:valid => true, :channel => channel.name}
 					respond_to do |format|
 						format.html
-						format.json { render json: session }
+						format.json { render json: test }
 					end
-					session[:valid] = true
 				else
 					session[:valid] = false
 					respond_to do |format|

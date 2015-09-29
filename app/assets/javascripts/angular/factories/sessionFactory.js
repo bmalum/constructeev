@@ -19,5 +19,5 @@ constructeev.factory('sessionFactory', ['$http', function($http) {
         return $http.delete(urlBase + '/' + id);
     };
 
-    return channelFactory   ;
+    return channelFactory;
 }]);

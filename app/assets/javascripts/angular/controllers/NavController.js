@@ -22,5 +22,6 @@ constructeev.controller('NavController', function($scope, channelFactory) {
 
     $scope.loginAdmin = function (){
         console.log('LoginAdmin hit');
+        
     }
 })
